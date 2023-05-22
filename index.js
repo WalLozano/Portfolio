@@ -88,8 +88,8 @@ const calendar = () => {
         const calendario = document.getElementById('calendar');
 
         let dates = new Date();
-        day = dates.getDay();
-        month = dates.getMonth();
+        day = dates.getDate();
+        month = dates.getMonth() + 1;
         year = dates.getFullYear();
 
         day = day < 10 ? `0${day}` : day;
@@ -100,3 +100,4 @@ const calendar = () => {
 }
 
 calendar();
+setInterval(calendar, 1000);
